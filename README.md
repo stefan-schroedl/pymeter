@@ -17,7 +17,7 @@ for i in range(count):
    with timing:
      do_something()
 
-print(f'wall clock time: {timing.wall}')  
+print(f'wall clock time: {timing.wall}; cpu time: {timing.cpu}')  
 ```
 
 See `test_meter.py` for more use cases.
