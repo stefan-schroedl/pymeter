@@ -492,7 +492,7 @@ class ProgressFormatter:
 
         self.property = property
 
-    def add_meter(self, meter, label, fmt=None):
+    def register_meter(self, meter, label, fmt=None):
         if not fmt:
             fmt = self.default_fmt
         self.meters.append((meter, label, fmt))

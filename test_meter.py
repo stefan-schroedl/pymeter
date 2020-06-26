@@ -106,8 +106,8 @@ def test_timed():
     assert meter['wait0_cpu'].mean == approx(0, abs=1e-2)
 
     p = ProgressFormatter()
-    p.add_meter(meter['wait0_wall'], 'system time')
-    p.add_meter(meter['wait0_cpu'], 'process time')
+    p.register_meter(meter['wait0_wall'], 'system time')
+    p.register_meter(meter['wait0_cpu'], 'process time')
     msg = str(p)
     assert msg == f'system time: {meter["wait0_wall"].mean:.4f}\tprocess time: {meter["wait0_cpu"].mean:.4f}'
 
