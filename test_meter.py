@@ -1,5 +1,3 @@
-import torch
-
 import math
 import time
 from pytest import approx, raises
